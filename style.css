@@ -36,6 +36,13 @@ body, html{
   justify-content: center;
   align-items: center;
 }
+.description li{
+  font-size: 20px;
+}
+.description li a{
+  text-decoration: none;
+  color: black;
+}
   main img{
     width: 20%;
     height: 20%;
@@ -111,6 +118,7 @@ body, html{
   font-weight: bold;
   border-radius: 15px;
   cursor: pointer;
+  text-align: center;
 }
 
 .card::before,
@@ -191,6 +199,18 @@ body, html{
   gap: 10px;
 }
 .tenses_eng .card{
+  display: flex;
+  flex-direction: column;
   width: 600px;
   height: 400px;
+  font-size: 16px;
+}
+
+.block1 h2:hover{
+  transform: scale(1.5);
+  background-color: antiquewhite;
+}
+ a:hover{
+  transform: scale(1.5);
+  background-color: antiquewhite;
 }
