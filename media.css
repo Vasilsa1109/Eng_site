@@ -1,0 +1,19 @@
+@media (max-width: 1800px) {
+    .phrases_eng{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .words_eng{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .tenses_eng{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 1200px) {
+    .head a{
+        font-size: 20px;
+    }
+    .loader {
+        --s: 15px;
+    }
+}
