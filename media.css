@@ -9,6 +9,16 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+@media (max-width: 1600px) {
+    .main-block{
+        display: flex;
+        flex-direction: column;
+    }
+    .subblock1{
+        width: 25%;
+        height: 25%;
+    }
+}
 @media (max-width: 1200px) {
     .head a{
         font-size: 20px;
@@ -16,4 +26,33 @@
     .loader {
         --s: 15px;
     }
+}
+@media (max-width: 800px){
+    .head img{
+        width: 50%;
+    }
+    .head, .block1, .idea{
+        display: flex;
+        flex-direction: column;
+        gap: 10px
+    }
+    .ru {
+        border-right: 0px ;
+        border-bottom: 3px solid black;
+    }
+    .head a{
+        font-size: 12px;
+        padding: 5px;
+        border-radius: 0%;
+    }
+    .loader {
+        --s: 0px;
+    } 
+    a:hover{
+        transform: scale(1.0);
+        border: 3px solid rgb(129, 68, 21)
+      }
+      main{
+        margin-top: 500px;
+      }
 }
