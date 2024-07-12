@@ -282,3 +282,11 @@ li{
   flex-direction: column;
   font-size: 30px;
 }
+
+.white-night{
+  background-color: aliceblue;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}

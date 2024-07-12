@@ -26,8 +26,18 @@
     .loader {
         --s: 15px;
     }
+    .phrases_eng{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .words_eng{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .tenses_eng{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
-@media (max-width: 800px){
+
+@media (max-width: 1000px){
     .head img{
         width: 50%;
     }
@@ -55,4 +65,25 @@
       main{
         margin-top: 500px;
       }
+      .phrases_eng{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .words_eng{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tenses_eng{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 600px){
+    .words_eng{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .phrases_eng .card,   .tenses_eng .card{
+       width: 90%;
+       height: 100%;
+       padding: 20px;
+       font-size: 12px;
+      }
+      
 }

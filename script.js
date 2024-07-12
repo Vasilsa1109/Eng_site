@@ -23,3 +23,12 @@ blocks.addEventListener('click', (event) => {
         tensesEng.scrollIntoView({ behavior: 'smooth' }); 
     }
 })
+
+
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    card.textContent = card.dataset.text2; // Извлекаем значение из `data-text2`
+  });
+});
