@@ -41,10 +41,14 @@
     .head img{
         width: 50%;
     }
-    .head, .block1, .idea{
+     .block1, .idea{
         display: flex;
         flex-direction: column;
         gap: 10px
+    }
+    .head img{
+        width: 30%;
+        height: 30%;
     }
     .ru {
         border-right: 0px ;
@@ -63,7 +67,7 @@
         border: 3px solid rgb(129, 68, 21)
       }
       main{
-        margin-top: 500px;
+        margin-top: 30%;
       }
       .phrases_eng{
         grid-template-columns: repeat(1, 1fr);
@@ -80,10 +84,12 @@
         grid-template-columns: repeat(1, 1fr);
     }
     .phrases_eng .card,   .tenses_eng .card{
-       width: 90%;
-       height: 100%;
-       padding: 20px;
        font-size: 12px;
       }
-      
+      .card [data-text2] {
+        font-size: 12px; 
+      }
+    .head{
+        flex-direction: column;
+    }
 }
