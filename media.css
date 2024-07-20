@@ -67,7 +67,7 @@
         border: 3px solid rgb(129, 68, 21)
       }
       main{
-        margin-top: 30%;
+        margin-bottom: 30%;
       }
       .phrases_eng{
         grid-template-columns: repeat(1, 1fr);
@@ -89,7 +89,33 @@
       .card [data-text2] {
         font-size: 12px; 
       }
-    .head{
+     .head{
         flex-direction: column;
+     }
+     .links{
+        display: flex;
+     }
+     h1{
+        font-size: 16px;
+     }
+     .card{
+        width: 200px;
+        height: 200px;
+     }
+     .card[data-text2], .card::before, .card::after{
+        font-size: 16px;
+     }
+     .phrases_eng .card {
+        width: 200px;
+        height: 200px;
+    }
+    .tenses_eng .card{
+        width: 200px;
+        height: 450px;
+        font-size: 14px;
+    }
+    .card::before, .card::after{
+        width: 10%;
+        height: 10%;
     }
 }

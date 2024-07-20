@@ -29,20 +29,46 @@ blocks.addEventListener('click', (event) => {
           checkEng.scrollIntoView({ behavior: 'smooth' }); 
       }
 })
-
 const checkButton = document.getElementById('checkButton');
-const checkCards = document.querySelectorAll('.check_card');
+checkButton.addEventListener('click', (e) => {
+    const userAnswers = document.querySelectorAll('.user_answer');
+    let correctCount = 0; // Счетчик правильных ответов
+    let incorrectCount = 0; // Счетчик неправильных ответов
 
-checkButton.addEventListener('click', () => {
-  checkCards.forEach(card => {
-    const engWord = card.querySelector('.eng_word').textContent;
-    const userAnswer = card.querySelector('.user_answer').value;
-    const correctAnswer = card.parentElement.dataset.text2;
+    userAnswers.forEach(input => {
+        const userInput = input.value.trim();
+        const correctAnswer = input.dataset.text2;
 
-    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-      card.classList.add('correct');
-    } else {
-      card.classList.add('incorrect');
-    }
-  });
+        // Убираем предыдущие классы
+        input.classList.remove("correct", "incorrect");
+
+        // Проверяем ответ
+        if (userInput.toLowerCase() === correctAnswer.toLowerCase()) {
+            input.classList.add("correct");
+            correctCount++;
+        } else {
+            input.classList.add("incorrect");
+            incorrectCount++;
+            input.value = `Правильный ответ: ${correctAnswer}`;
+        }
+    });
+
+    // Отображаем результаты
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = `Правильные ответы: ${correctCount}, неправильные ответы: ${incorrectCount}`;
 });
+
+// Обработчик для кнопки очистки
+const cliningButton = document.getElementById('cliningButton');
+cliningButton.addEventListener('click', (e) => {
+    const userAnswers = document.querySelectorAll('.user_answer');
+    userAnswers.forEach(input => {
+        input.value = ''; // Очищаем значение в input
+        input.classList.remove("correct", "incorrect"); // Убираем классы
+    });
+
+    // Сброс результатов
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = ''; // Очищаем результаты
+});
+

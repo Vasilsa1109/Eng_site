@@ -11,11 +11,13 @@
     <div class="head">
         <img src="chochoenglish-high-resolution-logo.png" alt="">
         <div class="loader"></div>
-        <a href="index.html">Main page</a>
-       <a href="b1.html">B1</a>
-       <a href="b2.html">B2</a>
-       <a href="test.html">Check yourself</a>
-       <a href="eng_songs.html">Learning English by songs</a>
+        <div class="links">
+            <a href="index.html">Main page</a>
+            <a href="b1.html">B1</a>
+            <a href="b2.html">B2</a>
+            <a href="test.html">Check yourself</a>
+            <a href="eng_songs.html">Learning English by songs</a>
+        </div>
     </div>
     <main>
         <h1> Готовы покорить английский B1-B2?</h1>
@@ -209,23 +211,23 @@
         </div>
         <h1>Checking</h1>
         <div class="check_eng">
+            <h3>Words</h3>
             <div class="check_card">
                 <span class="eng_word">to abolish</span>
-                <input type="text" class="user_answer" placeholder="Введите перевод..." data-text2="отменять" >
+                <input type="text" class="user_answer"  data-text2="отменять" >
             </div>
             <div class="check_card">
                 <span class="eng_word">agriculture</span>
-                <input type="text" class="user_answer" placeholder="Введите перевод..." data-text2="отменять">
+                <input type="text" class="user_answer" data-text2="сельское хозяйство">
             </div>
             <div class="check_card">
                 <span class="eng_word">indeed</span>
-                <input type="text" class="user_answer" placeholder="Введите перевод..." data-text2="отменять">
+                <input type="text" class="user_answer" data-text2="действительно">
             </div>
+            <div id="results"></div>
             <button id="checkButton">Проверить</button>
+            <button id="cliningButton">Очистить  всё</button>
         </div>
-        <script src="script.js"></script>
-    </body>
-    </html>
     </main>
     <script src="script.js"></script>
 </body>
