@@ -72,3 +72,40 @@ cliningButton.addEventListener('click', (e) => {
     resultsDiv.innerHTML = ''; // Очищаем результаты
 });
 
+const scrollButton = document.getElementById("scrollButton");
+
+// Показываем кнопку только при скроллинге
+window.onscroll = function () {
+    if (document.body.scrollTop < 20 || document.documentElement.scrollTop < 20) {
+        scrollButton.style.display = "block"; // Показываем кнопку
+    } else {
+        scrollButton.style.display = "none"; // Скрываем кнопку
+    }
+};
+
+// Функция прокрутки вниз
+scrollButton.onclick = function () {
+    window.scrollTo({
+        top: document.body.scrollHeight, // Прокрутка до конца страницы
+        behavior: "smooth" // Плавная прокрутка
+    });
+};
+
+const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+        // Показываем кнопку только при скроллинге
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopButton.style.display = "block"; // Показываем кнопку
+            } else {
+                scrollToTopButton.style.display = "none"; // Скрываем кнопку
+            }
+        };
+
+        // Функция прокрутки к началу
+        scrollToTopButton.onclick = function () {
+            window.scrollTo({
+                top: 0, // Прокрутка к верху страницы
+                behavior: "smooth" // Плавная прокрутка
+            });
+        };

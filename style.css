@@ -283,7 +283,7 @@ li{
   font-size: 30px;
 }
 
-.white-night{
+.song{
   background-color: aliceblue;
   padding: 30px;
   display: grid;
@@ -303,6 +303,9 @@ a{
   font-size: 20px;
   align-items: center;
   gap: 20px;
+}
+.check_eng{
+  padding-bottom: 5%;
 }
 input{
  height: 20px;
@@ -340,4 +343,36 @@ button {
 button:active {
   transform: translateX(0.1em) translateY(0.1em);
   box-shadow: 0 0 0 4px #bfa887, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
+}
+main{
+  padding-bottom: 30px;
+}
+
+
+
+.scroll-to-bottom-btn {
+  position: fixed; /* Фиксированное положение */
+  bottom: 20px; /* 20 пикселей от низа */
+  right: 20px; /* 20 пикселей от правого края */
+  background-color: #007bff; /* Цвет фона */
+  color: #fff; /* Цвет текста */
+  border: none; /* Убираем границу */
+  padding: 10px 15px; /* Отступы */
+  border-radius: 5px; /* Округление углов */
+  cursor: pointer; /* Указатель мыши */
+  display: block;
+}
+.scroll-btn{
+  position: fixed; /* Фиксированное положение */
+  top: 100px;
+  background-color: #007bff; /* Цвет фона */
+  color: #fff; /* Цвет текста */
+  border: none; /* Убираем границу */
+  padding: 10px 15px; /* Отступы */
+  border-radius: 5px; /* Округление углов */
+  cursor: pointer; /* Указатель мыши */
+  display: block;
+}
+.scroll-to-bottom-btn:hover, .scroll-btn:hover {
+  background-color: #0056b3; /* Цвет при наведении */
 }
